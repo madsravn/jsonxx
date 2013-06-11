@@ -25,16 +25,16 @@ Perhaps because web service clients are usually written in dynamic languages the
 * XML writer: convert documents to JXML format. See https://github.com/r-lyeh/JXML for details.
 * XML writer: convert documents to JXMLex format. See https://github.com/r-lyeh/JXMLex for details.
 
-h1. Notes about jsonxx::Settings values
+h1. Configuration
 
 h4. Strict/permissive parsing
 
 JSONxx can parse JSON documents both in strict or permissive mode.
 
-When <code>jsonxx::Settings::Parser</code> is set to <code>Strict</code>, JSONxx parser will accept:
+When <code>jsonxx::Settings::Parser</code> enum is set to <code>Strict</code>, JSONxx parser will accept:
 * Fully conformant JSON documents *only*
 
-When <code>jsonxx::Settings::Parser</code> is set to <code>Permissive</code>, JSONxx parser will accept:
+When <code>jsonxx::Settings::Parser</code> enum is set to <code>Permissive</code>, JSONxx parser will accept:
 * Fully conformant JSON documents
 * Ending commas in arrays and objects: <code>{ "array": [0,1,2,], }</code>
 * Single quoted strings: <code>['hello', "world"]</code>
@@ -44,7 +44,7 @@ Default value is <code>Permissive</code>.
 
 h4. Assertions
 
-JSONxx uses internally <code>JSONXX_ASSERT(...)</code> macro that works both in debug and release mode. Set <code>jsonxx::Settings::Assertions</code> value to <code>Disabled</code> to disable assertions.
+JSONxx uses internally <code>JSONXX_ASSERT(...)</code> macro that works both in debug and release mode. Set <code>jsonxx::Settings::Assertions</code> enum to <code>Disabled</code> to disable assertions.
 
 Default value is <code>Enabled</code>.
 
